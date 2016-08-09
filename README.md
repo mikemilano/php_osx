@@ -43,3 +43,20 @@ sudo make install
 The `php.ini` file for PHP 5.6 belongs at: `/etc/php5/php.ini`.
 
 Addition ini configs can be placed in: `/etc/php5/conf.d`.
+
+## Install xdebug
+```
+pecl install xdebug
+```
+
+`/etc/php5/conf.d/xdebug.ini`
+```
+[Xdebug]
+zend_extension=xdebug.so
+xdebug.remote_enable=1
+xdebug.remote_port=9000
+xdebug.profiler_enable=0
+xdebug.profiler_output_dir=/path/to/xdebug/data
+xdebug.max_nesting_level=256
+xdebug.remote_connect_back = On
+```
