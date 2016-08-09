@@ -18,7 +18,7 @@
 --with-png-dir=/usr/local/opt/libpng \
 --with-ldap \
 --enable-mbstring \
---with-mcrypt \
+--with-mcrypt=/usr/local/opt/mcrypt \
 --with-mysql \
 --with-mysqli \
 --enable-opcache \
