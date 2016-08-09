@@ -1,4 +1,4 @@
-# PHP on OSX
+# PHP Build on OSX
 
 This has been tested successfully with PHP 5.6 on OSX El Capitan.
 
