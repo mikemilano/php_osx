@@ -2,7 +2,7 @@
 --prefix=/usr/local \
 --with-apxs2=/usr/sbin/apxs \
 --with-config-file-path=/etc/php5 \
---with-config-file-scan-dir=/etc/php5/config.d \
+--with-config-file-scan-dir=/etc/php5/conf.d \
 --enable-dtrace \
 --enable-bcmath \
 --with-bz2 \
