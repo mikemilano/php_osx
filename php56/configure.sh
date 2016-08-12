@@ -1,8 +1,8 @@
 ./configure \
---prefix=/usr/local \
+--prefix=/usr/local/php56 \
 --with-apxs2=/usr/sbin/apxs \
---with-config-file-path=/etc/php5 \
---with-config-file-scan-dir=/etc/php5/conf.d \
+--with-config-file-path=/etc/php56 \
+--with-config-file-scan-dir=/etc/php56/config.d \
 --enable-dtrace \
 --enable-bcmath \
 --with-bz2 \
@@ -24,7 +24,6 @@
 --enable-opcache \
 --with-pdo-mysql \
 --enable-shmop \
---with-snmp \
 --enable-soap \
 --enable-sockets \
 --enable-sysvmsg \
