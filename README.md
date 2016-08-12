@@ -40,7 +40,7 @@ Here's some sed commands that will do the work for you.
 ```
 sed -i '' '/^EXTRA_LIBS/s/ -lssl//g' Makefile
 sed -i '' '/^EXTRA_LIBS/s/ -lcrypto//g' Makefile
-sed -i '' '/^EXTRA_LIBS/s:$: /usr/local/opt/openssl/lib/libssl.dylib/usr/local/opt/openssl/lib/libcrypto.dylib:' Makefile
+sed -i '' '/^EXTRA_LIBS/s:$: /usr/local/opt/openssl/lib/libssl.dylib /usr/local/opt/openssl/lib/libcrypto.dylib:' Makefile
 ```
 
 ## Build
@@ -50,11 +50,14 @@ sudo make install
 ```
 
 ## Configure
-The `php.ini` file for PHP 5.6 belongs at: `/etc/php5/php.ini`.
+The `php.ini` file for PHP 5.6 belongs at: `/etc/php56/php.ini`.
 
-Addition ini configs can be placed in: `/etc/php5/conf.d`.
+Addition ini configs can be placed in: `/etc/php56/conf.d`.
 
 ## Install xdebug
+
+You can now install xdebug (and other pecl extensions) like this:
+
 ```
 pecl install xdebug
 ```
