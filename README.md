@@ -61,6 +61,17 @@ sudo mkdir -p /etc/php56/conf.d
 sudo cp php.ini-development /etc/php56/php.ini
 ```
 
+# Command line path
+
+Since we defined a custom prefix in configure, we need to add the `bin` path of our new php build for command line operations.
+
+Do this by adding the following line to `~/.profile`.
+```
+export PATH="/usr/local/php56/bin"
+```
+
+Once complete, run `source ~/.profile` and then `which php`. The output should resolve to `/usr/local/php56/bin/php`.
+
 
 ## Install xdebug
 
