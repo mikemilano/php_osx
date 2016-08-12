@@ -54,6 +54,14 @@ The `php.ini` file for PHP 5.6 belongs at: `/etc/php56/php.ini`.
 
 Addition ini configs can be placed in: `/etc/php56/conf.d`.
 
+If it's your first time building, the directories may not be created yet.
+
+```
+sudo mkdir -p /etc/php56/conf.d
+sudo cp php.ini-development /etc/php56/php.ini
+```
+
+
 ## Install xdebug
 
 You can now install xdebug (and other pecl extensions) like this:
