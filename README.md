@@ -32,9 +32,16 @@ Copy the `configure.sh` file from the appropriate version directory of this repo
 In the `Makefile`, on the line that starts with `EXTRA_LIBS`
 
 - Remove `-lssl` and `-lcrypto`
-- Add `/usr/local/opt/openssl/lib/libssl.dylib `/usr/local/opt/openssl/lib/libcrypto.dylib`
+- Add `/usr/local/opt/openssl/lib/libssl.dylib /usr/local/opt/openssl/lib/libcrypto.dylib`
 
 Note: For my latest 5.6 configuration, `-libcrypto` was displayed twice on that line. In this case, remove both.
+
+Here's some sed commands that will do the work for you.
+```
+sed -i '' '/^EXTRA_LIBS/s/ -lssl//g' Makefile
+sed -i '' '/^EXTRA_LIBS/s/ -lcrypto//g' Makefile
+sed -i '' '/^EXTRA_LIBS/s:$: /usr/local/opt/openssl/lib/libssl.dylib/usr/local/opt/openssl/lib/libcrypto.dylib:' Makefile
+```
 
 ## Build
 ```
